@@ -10,7 +10,7 @@ size_t binary_tree_he(const binary_tree_t *tree)
 	size_t left_height = 0, right_height = 0;
 
 	if (tree == NULL)
-		return (-1);
+		return (0);
 
 	if (tree->left == NULL && tree->right == NULL)
 		return (0);
@@ -83,6 +83,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
+
+	
 
 	if (binary_tree_is_full(tree) && binary_tree_balance(tree) == 0)
 		return (1);
