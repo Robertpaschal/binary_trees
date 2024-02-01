@@ -13,14 +13,14 @@ size_t binary_tree_si(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-		
+
 	if (tree->left)
 	{
 		left_tree = binary_tree_si(tree->left);
 	}
 	if (tree->right)
 		right_tree = binary_tree_si(tree->right);
-	
+
 	return (left_tree + 1 + right_tree);
 }
 
